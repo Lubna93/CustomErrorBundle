@@ -11,9 +11,9 @@ This bundle replaces Symfony’s default error pages (404, 403, 500, etc.) with 
 
 ## Installation
 
-Require the bundle via Composer:
+Install the bundle via Composer:
 
-    composer require lubna/custom-error-bundle:^1.0
+    composer require lubna/custom-error-bundle
 
 ## 🔧 Configuration
 
@@ -46,5 +46,5 @@ In `config/packages/twig.yaml`:
 
 ## Author
 
-Made with ❤️ by [Lubna Altungi](https://github.com/Lubna93)  
+Made with ❤️ by [Lubna](https://github.com/Lubna93)  
 Feel free to contribute, fork, or open issues.
