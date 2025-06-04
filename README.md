@@ -1,6 +1,6 @@
 # CustomErrorBundle
 
-**Beautiful and customizable error pages for Symfony 7+.**  
+**Customizable error pages for Symfony 6.2 and 7+**  
 This bundle replaces Symfony’s default error pages (404, 403, 500, etc.) with user-friendly Twig templates.
 
 ## Features
@@ -13,7 +13,7 @@ This bundle replaces Symfony’s default error pages (404, 403, 500, etc.) with 
 
 Require the bundle via Composer:
 
-    composer require lubna/custom-error-bundle
+    composer require lubna/custom-error-bundle:^1.0
 
 ## 🔧 Configuration
 
