@@ -1,0 +1,16 @@
+{
+    "name": "lubna/custom-error-bundle",
+    "description": "Symfony bundle to customize and override default error pages (404, 403, 500, 401) with Twig templates and error controller support.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CustomError\\Bundle\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "symfony/framework-bundle": "^5.4 || ^6.0 || ^7.0",
+        "twig/twig": "^2.12 || ^3.0"
+    }
+}
