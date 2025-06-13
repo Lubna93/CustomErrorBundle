@@ -25,6 +25,12 @@ In `config/bundles.php`:
         CustomError\Bundle\CustomErrorBundle::class => ['all' => true],
     ];
 
+If you want the bundle to be active only in production, you can use:
+
+    return [
+        CustomError\Bundle\CustomErrorBundle::class => ['prod' => true],
+    ];
+
 ### 2. Register the error controller
 
 In `config/services.yaml`:
@@ -32,17 +38,6 @@ In `config/services.yaml`:
     services:
         CustomError\Bundle\Controller\ErrorController:
             tags: ['controller.service_arguments']
-
-    framework:
-        error_controller: CustomError\Bundle\Controller\ErrorController::show
-
-### 3. Register the bundle views (Twig path)
-
-In `config/packages/twig.yaml`:
-
-    twig:
-        paths:
-            '%kernel.project_dir%/vendor/lubna/custom-error-bundle/src/Resources/views': CustomError
 
 ## Author
 

@@ -16,10 +16,19 @@ class ErrorController extends AbstractController
     {
         $code = $exception->getStatusCode();
 
-        if ($code === 404) {
-            return $this->render('@CustomError/Bundles/TwigBundle/Exception/error404.html.twig', [], new Response('', 404));
-        }
+        $template = match ($code) {
+            404 => '@CustomError/Bundles/TwigBundle/Exception/error404.html.twig',
+            403 => '@CustomError/Bundles/TwigBundle/Exception/error403.html.twig',
+            default => '@CustomError/Bundles/TwigBundle/Exception/error.html.twig',
+        };
 
-        return $this->render('@CustomError/Bundles/TwigBundle/Exception/error.html.twig', ['code' => $code], new Response('', $code));
+        $response = $this->render($template, [
+            'exception' => $exception,
+            'code' => $code,
+        ]);
+
+        $response->setStatusCode($code);
+
+        return $response;
     }
 }
